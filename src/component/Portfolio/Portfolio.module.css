@@ -1,0 +1,101 @@
+.portfolioSection {
+    padding: 5rem 0;
+}
+
+.portfolioSubheading {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.portfolioGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.projectCard {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    aspect-ratio: 4 / 3; /* Give cards a consistent aspect ratio */
+}
+
+.projectCard img, .projectCard video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.6));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* For desktop hover */
+.projectCard:hover .cardOverlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* For mobile tap-to-reveal */
+.projectCard.mobileActive .cardOverlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projectCard:hover img, .projectCard:hover video {
+    transform: scale(1.05);
+}
+
+.cardOverlay h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.cardOverlay p {
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
+    margin-bottom: 1rem;
+}
+
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.techStack span {
+    background-color: var(--primary-color);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.projectLinks a {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    color: #fff;
+}
+.projectLinks a:hover {
+    color: var(--primary-hover-color);
+}

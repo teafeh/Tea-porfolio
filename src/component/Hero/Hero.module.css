@@ -1,0 +1,89 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 70px;
+    gap: 2rem;
+}
+
+.heroText {
+    flex: 1;
+}
+
+.heroIntro {
+    font-size: 1.2rem;
+    color: var(--text-muted-color);
+}
+
+.heroName {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+.heroTagline {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.heroBio {
+    color: var(--text-muted-color);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.heroSocials {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.heroImage {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePic {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(122, 40, 203, 0.5);
+}
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+    .heroText {
+        order: 2;
+    }
+    .heroImage {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+    .heroBio, .heroSocials {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .heroSocials {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroName {
+        font-size: 2.8rem;
+    }
+}

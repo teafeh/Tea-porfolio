@@ -1,0 +1,123 @@
+.timelineSection {
+    padding: 5rem 0;
+}
+
+.timelineContainer {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timelineContainer::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timelineBlock {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timelineBlock:nth-child(odd) {
+    left: 0;
+}
+.timelineBlock:nth-child(even) {
+    left: 50%;
+}
+
+.timelineDot {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 3px solid var(--primary-color);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timelineBlock:nth-child(odd) .timelineDot {
+    right: -7.5px;
+}
+.timelineBlock:nth-child(even) .timelineDot {
+    left: -7.5px;
+}
+
+.timelineBlock:nth-child(odd) .timelineContent {
+    text-align: right;
+}
+
+.timelineContent {
+    padding: 20px 30px;
+    background-color: var(--surface-color);
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.timelineContent h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+.timelineDate {
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.timelineContent ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+.timelineContent li {
+    margin-bottom: 0.5rem;
+}
+
+.btnCase{
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 1rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+.btnCase:hover{
+    background-color: var(--primary-hover-color);
+}
+
+@media (max-width: 768px) {
+    .timelineContainer::after {
+        left: 20px;
+    }
+    .timelineBlock {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 15px;
+    }
+    .timelineBlock:nth-child(odd),
+    .timelineBlock:nth-child(even) {
+        left: 0%;
+    }
+    .timelineBlock:nth-child(odd) .timelineContent {
+        text-align: left;
+    }
+    .timelineDot,
+    .timelineBlock:nth-child(even) .timelineDot {
+        left: 12.5px;
+    }
+}
