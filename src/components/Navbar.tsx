@@ -4,6 +4,8 @@ import { useTheme, tokens } from "../context/ThemeContext";
 import { NAV_LINKS } from "../constants/portfolioData";
 // @ts-ignore
 import logoSvg from "../assets/images/devtea.svg";
+// @ts-ignore
+import resumePdf from "../assets/doc/resume.pdf";
 
 export const Navbar = () => {
     const { dark, toggle } = useTheme();
@@ -63,7 +65,10 @@ export const Navbar = () => {
                         {dark ? <Sun size={17} /> : <Moon size={17} />}
                     </button>
                     <a
-                        href="#contact"
+                        href={resumePdf}
+                        download="Boluwatife_Oladele_Resume.pdf"
+                        target="_blank"
+                        rel="noreferrer"
                         className="text-sm font-semibold px-5 py-2.5 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-colors duration-300"
                     >
                         Resume
@@ -104,9 +109,12 @@ export const Navbar = () => {
                         </a>
                     ))}
                     <a
-                        href="#contact"
+                        href={resumePdf}
+                        download="Boluwatife_Oladele_Resume.pdf"
+                        target="_blank"
+                        rel="noreferrer"
                         onClick={() => setOpen(false)}
-                        className="text-center mt-2 text-sm font-semibold px-5 py-3 rounded-full border border-purple-500 text-purple-400"
+                        className="text-center mt-2 text-sm font-semibold px-5 py-3 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-colors duration-300"
                     >
                         Resume
                     </a>
