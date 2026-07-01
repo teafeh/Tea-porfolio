@@ -10,8 +10,8 @@ export const NAV_LINKS = [
 
 export const SKILL_GROUPS = [
   { title: "Languages", icon: Code2, items: ["JavaScript (ES6+)", "Python", "C#", "PHP", "HTML5", "CSS3", "SQL"] },
-  { title: "Backend & Databases", icon: Database, items: ["Node.js", "Express.js", "C#", "FastAPI", "REST API Design", "Webhook Architecture", "MongoDB", "PostgreSQL", "MySQL", "Firebase"] },
-  { title: "Frontend & UI", icon: Layers, items: ["React.js", "Tailwind CSS", "Responsive Design", "Figma", "Webflow"] },
+  { title: "Backend & Databases", icon: Database, items: ["Node.js", "Express.js", "FastAPI", "REST API Design", "Webhook Architecture", "MongoDB", "PostgreSQL", "MySQL", "Firebase"] },
+  { title: "Frontend & UI", icon: Layers, items: ["React.js", "React Native", "Electron", "Tailwind CSS", "Responsive Design", "Figma", "Webflow"] },
   { title: "AI & Automation", icon: Brain, items: ["LLM Workflow Engineering", "Gemini API", "ChatGPT API", "Zapier", "Prompt Engineering"] },
   { title: "Integrations & Tools", icon: Wrench, items: ["HubSpot", "Apollo.io", "Twilio", "Telegram Bot API", "Git", "GitHub", "Postman", "Agile/Scrum"] },
 ];
@@ -87,6 +87,30 @@ export const PROJECTS = [
     ],
     stack: ["FastAPI", "React", "JWT", "Pytest"],
     link: "https://github.com/teafeh/MovieRate",
+  },
+  {
+    name: "ProjectManager",
+    tag: "Git-Backed Mobile CMS",
+    description: "A decoupled, mobile-first productivity platform utilizing GitHub as an infrastructure-free, version-controlled repository storage engine.",
+    highlights: [
+      "Integrated the Octokit REST API wrapper to dynamically generate, serialize, and commit structured Markdown documentation directly to remote code bases.",
+      "Engineered an asynchronous native upload channel linking Expo ImagePicker with the Cloudinary REST SDK to host binary graphics seamlessly within raw markdown contexts.",
+    ],
+    stack: ["React Native", "Node.js", "Express.js", "Octokit API", "Cloudinary"],
+    link: "https://github.com/teafeh/project-manager",
+  },
+  {
+    name: "CleanPilot",
+    tag: "Smart Desktop File Cleaner",
+    description: "An offline-first, system-level desktop application designed to scan storage directories, analyze file age thresholds, and intelligently categorize redundant assets by deletion risk profiles.",
+    highlights: [
+      "Architected a cross-process communication layer utilizing Electron IPC handlers to bridge a React frontend securely with native Node.js file-system (fs) modules.",
+      "Engineered a high-performance recursive directory scanner featuring parameterized age-filters, deep nesting constraints, and custom directory-skipping guardrails (e.g., node_modules, .git).",
+      "Implemented an algorithmic rule engine that automatically matches file signatures, regex strings, and size limits to classify data into risk-assessed groups (Installers, Large Files, Documents).",
+      "Integrated native OS Shell mechanisms to safely down-route user-approved maintenance selections directly to the system platform's recycling trash bin instead of hard-deleting records."
+    ],
+    stack: ["Electron", "React", "Vite", "Node.js", "IPC Architecture"],
+    link: "https://github.com/teafeh/cleanpilot",
   },
 ];
 

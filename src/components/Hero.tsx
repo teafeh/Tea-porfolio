@@ -40,12 +40,12 @@ export const Hero = () => {
                     </h1>
 
                     <h2 className={"mt-6 text-xl sm:text-2xl font-semibold " + t.heading}>
-                        Full-Stack Developer &amp; AI Automation Engineer
+                        Cross-Platform Product &amp; AI Automation Engineer
                     </h2>
 
                     <p className={"mt-5 max-w-xl text-base sm:text-lg leading-relaxed " + t.textBody}>
                         Based in Lagos/Ibadan, Nigeria, I build and design high-quality,
-                        scalable web products. With a passion for clean code and
+                        scalable web, mobile, and desktop products. With a passion for clean code and
                         intelligent automation, I turn complex ideas into seamless,
                         production-ready systems.
                     </p>
