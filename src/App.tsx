@@ -6,6 +6,7 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
+import { IntroLoader } from "./components/IntroLoader";
 
 function MainLayout() {
     const { dark } = useTheme();
@@ -28,6 +29,7 @@ function MainLayout() {
 export default function App() {
     return (
         <ThemeProvider>
+            <IntroLoader />
             <MainLayout />
         </ThemeProvider>
     );
